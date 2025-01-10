@@ -2,7 +2,7 @@
 Github repo for the inversity challenge involving government services 
 
 
-In my project I have written a piece of code that allows the user to save any personal information they want which if the personal information is then required in a gov.uk service it will automatically fill the tab space with this information as one of the main problems with users was that they felt that it was very straining by typing out personal information every time. Alongside this I have also created  a feature that will recommend types of service on gov.uk related to (or the next steps) to the service that they just completed.  
+In my project I have written a piece of code that allows the user to save any personal information they want because one of the main problems was that users felt that it was a very tedious task having to remember their personal information every time. Alongside this I have also created  a feature that will recommend types of service on gov.uk related to (or the next steps) to the service that they just completed.  
 
 The main problems I was trying to solve were: 
 
