@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="govuk-width-container">
+        <header class="govuk-header" role="banner">
+            <div class="govuk-header__container govuk-width-container">
+                <div class="govuk-header__logo">
+                    <a href="/" class="govuk-header__link govuk-header__link--homepage">
+                        GOV.UK
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="govuk-main-wrapper">
+            <h1 class="govuk-heading-xl">Enter Your Personal Information</h1>
+            <form id="personal-info-form" class="govuk-form-group">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="address">
+                        Address
+                    </label>
+                    <textarea class="govuk-textarea" id="address" name="address" rows="5" required></textarea>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="card-number">
+                        Card Number
+                    </label>
+                    <input class="govuk-input" id="card-number" name="card-number" type="text" maxlength="16" required>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="dob">
+                        Date of Birth
+                    </label>
+                    <input class="govuk-input" id="dob" name="dob" type="date" required>
+                </div>
+
+                <button type="submit" class="govuk-button">Submit</button>
+            </form>
+        </main>
+
+        <footer class="govuk-footer">
+            <div class="govuk-width-container">

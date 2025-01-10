@@ -1,0 +1,83 @@
+/* GOV.UK Design System Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f2f1;
+}
+
+.govuk-width-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.govuk-header {
+    background-color: #1d70b8;
+    color: white;
+    padding: 10px 20px;
+}
+
+.govuk-header__link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.govuk-main-wrapper {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.govuk-heading-xl {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.govuk-form-group {
+    margin-bottom: 20px;
+}
+
+.govuk-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.govuk-input, .govuk-textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #b1b4b6;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.govuk-button {
+    background-color: #1d70b8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.govuk-button:hover {
+    background-color: #003078;
+}
+
+.govuk-footer {
+    background-color: #1d70b8;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.govuk-footer__meta {
+    font-size: 14px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - GOV.UK Style</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        GOV.UK
+    </header>
+
+    <div class="container">
+        <!-- Sidebar with links -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" class="tab-link" data-tab="home">Home</a></li>
+                <li><a href="#" class="tab-link" data-tab="recommendations">Recommendations</a></li>
+                <li><a href="#" class="tab-link" data-tab="personal-info">Personal Information</a></li>
+                <li><a href="#" class="tab-link" data-tab="settings">Settings</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Content sections -->
+        <div class="content">
+            <div id="home" class="tab-content active">
+                <h2>Home</h2>
+                <p>Welcome to the Home tab!</p>
+            </div>
+            <div id="recommendations" class="tab-content">
+                <h2>Recommendations</h2>
+                <p>Here are your recommendations.</p>
+            </div>
+            <div id="personal-info" class="tab-content">
+                <h2>Personal Information</h2>
+                <p>Manage your personal details here.</p>
+            </div>
+            <div id="settings" class="tab-content">
+                <h2>Settings</h2>
+                <p>Configure your preferences here.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+        <!-- Main content with search bar -->
+        <div class="main-content">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search...">
+                <button onclick="searchFunction()">Search</button>
+            </div>
+
+            <h2>Welcome to the Home Page</h2>
+            <p>Use the navigation menu on the left to explore the site.</p>
+
+            <div class="external-links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.gov.uk" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/UK_Gov_logo.svg/1280px-UK_Gov_logo.svg.png" alt="Gov.uk">
+                            gov.uk
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.nhs.uk" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/NHS_Logo.svg/1280px-NHS_Logo.svg.png" alt="NHS">
+                            NHS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.gov.scot" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Scottish_Government_logo.svg/1280px-Scottish_Government_logo.svg.png" alt="Scottish Government">
+                            Scottish Government
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.parliament.uk" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/UK_Parliament_Logo.svg/1280px-UK_Parliament_Logo.svg.png" alt="UK Parliament">
+                            UK Parliament
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.gov.wales" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Welsh_Government_logo.svg/1280px-Welsh_Government_logo.svg.png" alt="Welsh Government">
+                            Welsh Government
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Government of UK | <a href="https://www.gov.uk" target="_blank">gov.uk</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

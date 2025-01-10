@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations - GOV.UK Style</title>
+    <!-- GOV.UK Frontend -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/govuk-frontend@4.7.0/govuk/all.min.css">
+    <style>
+        /* Custom Styling for Recommendations Page */
+        .govuk-panel--recommendations {
+            border-left: 10px solid #1d70b8;
+            padding: 20px;
+        }
+
+        .govuk-heading-xl {
+            margin-top: 0;
+        }
+
+        .govuk-body-l {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .govuk-panel__title {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body class="govuk-template__body">
+
+    <!-- GOV.UK Header -->
+    <header class="govuk-header" role="banner" data-module="govuk-header">
+        <div class="govuk-header__container govuk-width-container">
+            <div class="govuk-header__logo">
+                <a href="/" class="govuk-header__link govuk-header__link--homepage">
+                    <span class="govuk-header__logotype">
+                        <span class="govuk-header__logotype-text">GOV.UK</span>
+                    </span>
+                </a>
+            </div>
+            <div class="govuk-header__content">
+                <a href="#" class="govuk-header__link govuk-header__link--service-name">
+                    Recommendations Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper" id="main-content" role="main">
+            <h1 class="govuk-heading-xl">Recommendations</h1>
+            <p class="govuk-body-l">Here are the next steps you can take based on your recent activity.</p>
+
+            <div class="govuk-panel govuk-panel--recommendations">
+                <h2 class="govuk-panel__title">Your Next Steps</h2>
+                <ul id="recommendations-list" class="govuk-list govuk-list--bullet"></ul>
+            </div>
+
+            <section class="govuk-inset-text">
+                <p>If you need help completing any of these steps, visit the <a href="#" class="govuk-link">support page</a>.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- GOV.UK Footer -->
+    <footer class="govuk-footer" role="contentinfo">
+        <div class="govuk-width-container">
+            <div class="govuk-footer__meta">
+                <span class="govuk-footer__licence-description">
+                    All content is available under the <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/">Open Government Licence v3.0</a>, except where otherwise stated.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GOV.UK Frontend JS -->
+    <script src="https://cdn.jsdelivr.net/npm/govuk-frontend@4.7.0/govuk/all.min.js"></script>
+
+    <script>
+        // Mock data for user activity
+        const userActivity = [
+            { action: 'completed-personal-info', timestamp: '2025-01-01' },
+            { action: 'updated-tax-details', timestamp: '2025-01-02' },
+        ];
+
+        // Recommendations logic
+        const recommendationsData = [
+            {
+                id: 'register-to-vote',
+                title: 'Register to vote',
+                condition: (activity) => activity.some(item => item.action === 'completed-personal-info'),
+            },
+            {
+                id: 'apply-passport',
+                title: 'Apply for a passport',
+                condition: (activity) => activity.some(item => item.action === 'completed-personal-info'),
+            },
+            {
+                id: 'update-driving-license',
+                title: 'Update your driving license details',
+                condition: (activity) => activity.some(item => item.action === 'updated-tax-details'),
+            },
+            {
+                id: 'start-personal-info',
+                title: 'Complete your personal information',
+                condition: (activity) => !activity.some(item => item.action === 'completed-personal-info'),
+            },
+        ];
+
+        // Populate recommendations
+        function populateRecommendations() {
+            const recommendationsList = document.getElementById('recommendations-list');
+            recommendationsList.innerHTML = '';
+
+            const applicableRecommendations = recommendationsData.filter(rec => rec.condition(userActivity));
+            if (applicableRecommendations.length > 0) {
+                applicableRecommendations.forEach(rec => {
+                    const li = document.createElement('li');
+                    li.textContent = rec.title;
+                    recommendationsList.appendChild(li);
+                });
+            } else {
+                const li = document.createElement('li');
+                li.textContent = 'No recommendations available at this time.';
+                recommendationsList.appendChild(li);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', populateRecommendations);
+    </script>
+</body>
+</html>
